@@ -40,8 +40,9 @@ public class sc_Monster : MonoBehaviour
             Vector3 direction = player.position - transform.position;
             direction.y = 0; // Ensure the monster stays on the same level as the player
             transform.Translate(direction.normalized * moveSpeed * Time.deltaTime);
-            transform.LookAt(player.position - Vector3.up * 0.5f, Vector3.up);
             transform.position = new Vector3(transform.position.x, _hauteur, transform.position.z);
+            transform.LookAt(player.position, Vector3.up);
+            transform.rotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y, 0));
             // Check if the player is within kill range
             if (Vector3.Distance(transform.position, player.position) <= killRange)
             {
