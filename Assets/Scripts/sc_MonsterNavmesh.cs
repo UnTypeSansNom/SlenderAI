@@ -41,7 +41,8 @@ public class sc_MonsterNavmesh : MonoBehaviour
             agent.SetDestination(player.position - Vector3.up*2);
             agent.isStopped = false;
 
-            if (Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(player.position.x, 0, player.position.z)) <= killRange)
+            if (Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z),
+                new Vector3(player.position.x, 0, player.position.z)) <= killRange)
             {
                 KillPlayer();
             }
