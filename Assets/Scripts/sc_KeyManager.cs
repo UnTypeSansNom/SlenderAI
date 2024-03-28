@@ -14,7 +14,7 @@ public class sc_KeyManager : MonoBehaviour
     {
         if (other.CompareTag("Key"))
         {
-            Destroy(other.gameObject); // Destroy the collected key
+            Destroy(other.transform.parent.gameObject); // Destroy the collected key
             keysCollected++; // Increment the number of keys collected
             Debug.Log("Key collected! Keys collected: " + keysCollected);
 
