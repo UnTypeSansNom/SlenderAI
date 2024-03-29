@@ -11,7 +11,7 @@ public class sc_Statue : MonoBehaviour
     public float chaseRange = 10f; // Distance at which the monster starts chasing the player
     public float killRange = 1f; // Distance at which the monster kills the player
 
-    private bool isChasing = false; // Flag to track if the monster is chasing the player
+    public bool isChasing = false; // Flag to track if the monster is chasing the player
 
     void Update()
     {
