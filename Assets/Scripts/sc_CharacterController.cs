@@ -8,6 +8,7 @@ public class sc_CharacterController : MonoBehaviour
     public float mouseSensitivity = 100f; // Mouse sensitivity for looking around
     CharacterController controller; // Reference to the CharacterController component
     float verticalRotation = 0f; // Stores vertical rotation
+    public bool isMoving = false;
 
     void Start()
     {
@@ -21,6 +22,8 @@ public class sc_CharacterController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         Vector3 moveDirection = transform.right * horizontalInput + transform.forward * verticalInput;
+
+        if(moveDirection == Vector3.zero) { isMoving = false; } else { isMoving = true; }
 
         // Move the player
         controller.Move(moveDirection.normalized * moveSpeed * Time.deltaTime);
