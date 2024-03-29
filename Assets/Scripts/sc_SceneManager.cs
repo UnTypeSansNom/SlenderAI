@@ -16,6 +16,12 @@ public class sc_SceneManager : MonoBehaviour
         SceneManager.LoadScene("Controls");
     }
 
+    // Méthode pour charger la scène "Controls"
+    public void ChargerSceneGameMenu()
+    {
+        SceneManager.LoadScene("GameMenu");
+    }
+
     // Méthode pour quitter l'application
     public void QuitterApplication()
     {
