@@ -442,8 +442,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: -1.8
+  m_Height: 2.5
+  m_BaseOffset: -1.11
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!1 &5805142743122247213
@@ -727,7 +727,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.005590441, y: 0.0045060855, z: 0.7071627, w: 0.70701444}
   m_LocalPosition: {x: 0.028712273, y: 3.3489592, z: -0.10713196}
-  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_LocalScale: {x: 70, y: 70, z: 70}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3464246759004361414}

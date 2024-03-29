@@ -19,6 +19,7 @@ public class sc_MonsterNavmesh : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>(); // Get the NavMeshAgent component
+        agent.speed = moveSpeed;
     }
 
     void Update()
