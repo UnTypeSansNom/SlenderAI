@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5219755856667869048}
-  - component: {fileID: 236213529334597418}
   m_Layer: 0
   m_Name: StatueMonster
   m_TagString: Untagged
@@ -33,23 +32,6 @@ Transform:
   - {fileID: 5602255490563820223}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &236213529334597418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4643830107405794085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b60941ebd686a8a488a54fa6b340e3ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  maxAngle: 60
-  moveSpeed: 2
-  chaseRange: 10
-  killRange: 2
 --- !u!1001 &5347334969208646996
 PrefabInstance:
   m_ObjectHideFlags: 0

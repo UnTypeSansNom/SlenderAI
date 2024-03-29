@@ -5,8 +5,10 @@ using UnityEngine;
 public class sc_KeyManager : MonoBehaviour
 {
     public int keysNeeded = 3; // Number of keys needed to open the door
+    public int keysBarriers = 3; // Number of keys needed to open the door
     public GameObject door; // Reference to the door GameObject
     public GameObject openDoor;
+    public GameObject doorTuto, barriere;
     public AudioClip keyCollectedSound, doorOpenSound; // Sound to play when the door opens
 
     private int keysCollected = 0; // Number of keys collected
@@ -20,10 +22,12 @@ public class sc_KeyManager : MonoBehaviour
             Debug.Log("Key collected! Keys collected: " + keysCollected);
             AudioSource.PlayClipAtPoint(keyCollectedSound, transform.position); // Play key sound
 
+            if(keysCollected >= 1) { doorTuto.SetActive(false); }
             if (keysCollected >= keysNeeded)
             {
                 OpenDoor(); // Open the door if enough keys are collected
             }
+            if(keysCollected >= keysBarriers) { barriere.SetActive(false); }
         }
     }
 
