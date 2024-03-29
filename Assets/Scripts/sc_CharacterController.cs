@@ -39,5 +39,14 @@ public class sc_CharacterController : MonoBehaviour
         verticalRotation -= mouseY;
         verticalRotation = Mathf.Clamp(verticalRotation, -90f, 90f); // Clamp vertical rotation to avoid flipping
         Camera.main.transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
+
+
+
+        //Lampe
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            GameObject lamp = transform.GetChild(1).GetChild(0).gameObject;
+            lamp.SetActive(!lamp.activeInHierarchy);
+        }
     }
 }
