@@ -26,6 +26,7 @@ public class sc_SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public AudioSource uncannyAmbienceAMB;
 
     public AudioSource cameraOnSFX;
     public AudioSource footstepsWalkingSFX;
@@ -43,6 +44,8 @@ public class sc_SoundManager : MonoBehaviour
 
     void Start()
     {
+        uncannyAmbienceAMB = GetComponent<AudioSource>();
+        
         cameraOnSFX = GetComponent<AudioSource>();
         footstepsWalkingSFX = GetComponent<AudioSource>();
         flashlightSwitchSFX = GetComponent<AudioSource>();
@@ -56,11 +59,13 @@ public class sc_SoundManager : MonoBehaviour
         virginStatueMovesSFX = GetComponent<AudioSource>();
         virginStatueIsCloseSFX = GetComponent<AudioSource>();
         virginStatueScreamerSFX = GetComponent<AudioSource>();
+
+        cameraOnSFX.Play();
     }
 
-    public void PlayCameraOnSFX()
+    public void PlayUncannyAmbienceAMB()
     {
-        cameraOnSFX.Play();
+        uncannyAmbienceAMB.Play();
     }
 
     public void PlayFootstepsWalkingSFX()
