@@ -25,9 +25,13 @@ public class sc_MonsterNavmesh : MonoBehaviour
 
     void Update()
     {
+        Vector3 v1 = transform.position;
+        v1 = Vector3.Scale(v1, new Vector3(1, 0, 1)) + Vector3.up;
+        Vector3 v2 = player.position;
+        v2 = Vector3.Scale(v2, new Vector3(1, 0, 1)) + Vector3.up;
         // Check if the player is within the chase range
         if (Vector3.Distance(transform.position, player.position) <= chaseRange &&
-            !Physics.Raycast(transform.position, player.position, Vector3.Distance(player.position, transform.position), check))
+            !Physics.Raycast(v1, v2, Vector3.Distance(v1, v2), check))
         {
             isChasing = true;
             animator.SetBool("Move", true);
