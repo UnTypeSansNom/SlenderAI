@@ -368,8 +368,8 @@ MonoBehaviour:
   keysNeeded: 3
   door: {fileID: 0}
   openDoor: {fileID: 0}
-  keyCollectedSound: {fileID: 0}
-  doorOpenSound: {fileID: 0}
+  keyCollectedSound: {fileID: 8300000, guid: 6d9c782e48a775d4ea5cde3205fac0d8, type: 3}
+  doorOpenSound: {fileID: 8300000, guid: 72669f71a6cfd1a42b178b4812bd6c2b, type: 3}
 --- !u!1 &8147062388956226329
 GameObject:
   m_ObjectHideFlags: 0
