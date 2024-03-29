@@ -7,19 +7,24 @@ public class sc_SceneManager : MonoBehaviour
     // Méthode pour charger la scène "Jouer"
     public void ChargerSceneJouer()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Map Ld");
+        Time.timeScale = 1.0f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Méthode pour charger la scène "Controls"
     public void ChargerSceneControls()
     {
         SceneManager.LoadScene("Controls");
+        Time.timeScale = 1.0f;
     }
 
     // Méthode pour charger la scène "Controls"
     public void ChargerSceneGameMenu()
     {
         SceneManager.LoadScene("GameMenu");
+        Time.timeScale = 1.0f;
     }
 
     // Méthode pour quitter l'application

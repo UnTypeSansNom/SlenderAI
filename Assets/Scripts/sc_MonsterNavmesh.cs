@@ -62,10 +62,6 @@ public class sc_MonsterNavmesh : MonoBehaviour
 
     void KillPlayer()
     {
-        // You can implement whatever logic you want for killing the player here.
-        // For example, you might reload the level, play a death animation, or show a game over screen.
-        Debug.Log("Player has been killed by the monster!");
-        // Example: You could reload the level
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        sc_GameState.instance.Perd();
     }
 }
