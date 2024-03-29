@@ -12,6 +12,7 @@ public class sc_MonsterNavmesh : MonoBehaviour
 
     private bool isChasing = false; // Flag to track if the monster is chasing the player
     public NavMeshAgent agent; // Reference to the NavMeshAgent component
+    public LayerMask check;
 
     Animator animator;
 
@@ -25,7 +26,8 @@ public class sc_MonsterNavmesh : MonoBehaviour
     void Update()
     {
         // Check if the player is within the chase range
-        if (Vector3.Distance(transform.position, player.position) <= chaseRange)
+        if (Vector3.Distance(transform.position, player.position) <= chaseRange &&
+            !Physics.Raycast(transform.position, player.position, Vector3.Distance(player.position, transform.position), check))
         {
             isChasing = true;
             animator.SetBool("Move", true);
