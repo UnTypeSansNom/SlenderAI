@@ -8,7 +8,7 @@ public class sc_SoundManager : MonoBehaviour
 {
     public static sc_SoundManager instance;
     public sc_CharacterController characterController;
-    public sc_Statue statueController;
+    public sc_statueNavmesh statueController;
     public sc_KeyManager keyManager;
 
     public Transform player;
@@ -121,7 +121,7 @@ public class sc_SoundManager : MonoBehaviour
 
     public void PlayVirginStatueMoves()
     {
-        if (statueController.isChasing)
+        if (!statueController.agent.isStopped)
         {
             virginStatueMovesSFX.Play();
         }
